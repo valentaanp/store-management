@@ -7,6 +7,29 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+## Installation Guide
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com/valentaanp/store-management.git
+   cd store-management
+
+   ```
+
+2. **Install dependencies**
+
+   ```bash
+   npm i
+   npm audit fix
+
+   ```
+
+3. **Run the app**
+   ```bash
+   npm run dev-serve
+   ```
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
