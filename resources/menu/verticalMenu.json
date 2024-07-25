@@ -7,10 +7,10 @@
       "slug": "dashboard-analytics"
     },
     {
-      "url": "/resources",
-      "name": "Resources",
-      "icon": "menu-icon tf-icons bx bx-store",
-      "slug": "resources"
+      "url": "/people",
+      "name": "People",
+      "icon": "menu-icon tf-icons bx bx-user",
+      "slug": "people"
     }
   ]
 }
