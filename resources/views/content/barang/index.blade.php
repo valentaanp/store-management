@@ -49,37 +49,10 @@
         </tr>
       </thead>
       <tbody>
-        <!-- @php
-      $items = [
-        ['id' => 1, 'name' => 'Shampoo', 'category' => 'Personal Care', 'price' => '40000', 'quantity' => 120],
-        ['id' => 2, 'name' => 'Toothpaste', 'category' => 'Personal Care', 'price' => '12000', 'quantity' => 200],
-        ['id' => 3, 'name' => 'Hand Soap', 'category' => 'Household', 'price' => '10000', 'quantity' => 150],
-        ['id' => 4, 'name' => 'Detergent', 'category' => 'Household', 'price' => '30000', 'quantity' => 80],
-      ];
-    @endphp
-        @foreach ($items as $item)
-      <tr>
-        <th scope="row">{{ $item['id'] }}</th>
-        <td>{{ $item['name'] }}</td>
-        <td>{{ $item['category'] }}</td>
-        <td>Rp {{ number_format($item['price'], 2, ',', '.') }}</td>
-        <td>{{ $item['quantity'] }}</td>
-        <td class="text-center">
-        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalBarang"
-          data-id="{{ $item['id'] }}" data-name="{{ $item['name'] }}" data-category="{{ $item['category'] }}"
-          data-price="{{ $item['price'] }}" data-quantity="{{ $item['quantity'] }}" data-bs-toggle="tooltip"
-          data-bs-placement="top" title="Edit">
-          <i class="bx bx-edit"></i>
-        </button>
-        <button class="btn btn-danger" data-bs-toggle="tooltip" data-bs-placement="top" title="Delete">
-          <i class="bx bx-trash"></i>
-        </button>
-        </td>
-      </tr>
-    @endforeach -->
         @foreach($barang as $item)
         <tr>
-          <td class="id-barang">{{ $item->IdBarang }}</td>
+          <td>{{ $loop->iteration }}</td>
+          <td class="id-barang d-none">{{ $item->IdBarang }}</td>
           <td class="nama-barang">{{ $item->NamaBarang }}</td>
           <td class="desk-barang">{{ $item->Keterangan }}</td>
           <td class="harga-barang">

@@ -25,5 +25,23 @@ Route::post('/barang/edit-barang/{id}', $controller_path . '\barang\Barang@updat
 Route::delete('/barang/hapus-barang/{id}', $controller_path . '\barang\Barang@destroy')->name('barang.destroy');
 
 
-// Store Routes
+// People Routes
 Route::get('/people', $controller_path . '\resources\Resources@index')->name('people');
+
+// Hak Akses Routes
+Route::get('/hak-akses', $controller_path . '\hak_akses\HakAkses@index')->name('hak-akses');
+
+// Pengguna Routes
+Route::get('/pengguna', $controller_path . '\pengguna\Pengguna@index')->name('pengguna');
+
+// Supplier Routes
+Route::get('/supplier', $controller_path . '\supplier\Supplier@index')->name('supplier');
+
+// Penjualan Routes
+Route::get('/penjualan', $controller_path . '\penjualan\Penjualan@index')->name('penjualan');
+
+// Pembelian Routes
+Route::get('/pembelian', $controller_path . '\pembelian\Pembelian@index')->name('pembelian');
+
+// Pelanggan Routes
+Route::get('/pelanggan', $controller_path . '\pelanggan\Pelanggan@index')->name('pelanggan');

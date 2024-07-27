@@ -12,7 +12,7 @@ class PenjualanModel extends Model
     protected $primaryKey = 'IdPenjualan';
     public $timestamps = false;
     protected $fillable = [
-        'JumlahPembelian',
+        'JumlahPenjualan',
         'HargaJual',
         'IdBarang',
         'IdPengguna',

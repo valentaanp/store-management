@@ -7,16 +7,52 @@
       "slug": "dashboard-analytics"
     },
     {
+      "url": "/people",
+      "name": "People",
+      "icon": "menu-icon tf-icons bx bx-user-check",
+      "slug": "people"
+    },
+    {
+      "url": "/hak-akses",
+      "name": "Hak Akses",
+      "icon": "menu-icon tf-icons bx bx-key",
+      "slug": "hak-akses"
+    },
+    {
+      "url": "/pengguna",
+      "name": "Pengguna",
+      "icon": "menu-icon tf-icons bx bx-user",
+      "slug": "pengguna"
+    },
+    {
+      "url": "/supplier",
+      "name": "Supplier",
+      "icon": "menu-icon tf-icons bx bx-box",
+      "slug": "supplier"
+    },
+    {
       "url": "/barang",
-      "name": "Barang",
+      "name": "Barang (CRUD)",
       "icon": "menu-icon tf-icons bx bx-store",
       "slug": "barang"
     },
     {
-      "url": "/people",
-      "name": "People",
-      "icon": "menu-icon tf-icons bx bx-user",
-      "slug": "people"
+      "url": "/penjualan",
+      "name": "Penjualan",
+      "icon": "menu-icon tf-icons bx bx-receipt",
+      "slug": "penjualan"
+    },
+    {
+      "url": "/pembelian",
+      "name": "Pembelian",
+      "icon": "menu-icon tf-icons bx bx-cart",
+      "slug": "pembelian"
+    },
+    {
+      "url": "/pelanggan",
+      "name": "Pelanggan",
+      "icon": "menu-icon tf-icons bx bx-dollar",
+      "slug": "pelanggan"
     }
   ]
 }

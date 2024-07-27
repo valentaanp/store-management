@@ -17,7 +17,11 @@
 
    ```
 
-2. **Install dependencies**
+2. **Import Database**
+
+   import store_management.sql into your database
+
+3. **Install dependencies**
 
    ```bash
    npm i
@@ -25,7 +29,14 @@
 
    ```
 
-3. **Run the app**
+4. **Install / Update composer**
+
+   ```bash
+   composer i
+   composer update
+   ```
+
+5. **Run the app**
    ```bash
    npm run dev-serve
    ```
