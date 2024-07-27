@@ -210,6 +210,7 @@
     $(document).on("click", "#addNewItemButton", function () {
       $("#formBarang").attr("action", "/barang/tambah-barang");
       modalBarang.find("#modalBarangLabel").text("Tambah Barang");
+      modalBarang.find("#saveChangesButton").text("Tambah Barang");
       $("#formBarang").trigger("reset"); // Reset the form fields
       modalBarang.modal("show");
     });
@@ -246,6 +247,7 @@
 
       // Update modal title and form action
       modalBarang.find("#modalBarangLabel").text("Edit Barang");
+      modalBarang.find("#saveChangesButton").text("Edit Barang");
       $("#formBarang").attr("action", "/barang/edit-barang/" + idBarang);
 
       // Show the modal
