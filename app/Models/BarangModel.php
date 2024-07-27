@@ -15,6 +15,8 @@ class BarangModel extends Model
         'NamaBarang',
         'Keterangan',
         'Satuan',
+        'Jumlah',
+        'HargaPerBarang',
         'IdPengguna',
     ];
     public function pengguna()

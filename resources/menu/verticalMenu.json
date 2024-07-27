@@ -7,6 +7,12 @@
       "slug": "dashboard-analytics"
     },
     {
+      "url": "/barang",
+      "name": "Barang",
+      "icon": "menu-icon tf-icons bx bx-store",
+      "slug": "barang"
+    },
+    {
       "url": "/people",
       "name": "People",
       "icon": "menu-icon tf-icons bx bx-user",

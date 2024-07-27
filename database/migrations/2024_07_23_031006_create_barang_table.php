@@ -16,11 +16,13 @@ return new class extends Migration
             $table->string('NamaBarang', 100);
             $table->string('Keterangan', 100);
             $table->string('Satuan', 50);
+            $table->integer('Jumlah');
+            $table->decimal('HargaPerBarang', 10, 2);
             $table->bigInteger('IdPengguna')->unsigned();
 
             $table->foreign('IdPengguna')->references('IdPengguna')->on('pengguna')
-            ->onUpdate('cascade')
-            ->onDelete('cascade');
+                ->onUpdate('cascade')
+                ->onDelete('cascade');
         });
     }
 

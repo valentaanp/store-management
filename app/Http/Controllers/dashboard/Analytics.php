@@ -10,8 +10,6 @@ class Analytics extends Controller
 {
   public function index()
   {
-    $barang = BarangModel::all();
-    // dd($barang);
-    return view('content.dashboard.dashboards-analytics', compact('barang'));
+    return view('content.dashboard.index');
   }
 }
