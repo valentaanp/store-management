@@ -196,93 +196,8 @@
 </div>
 
 @endsection @section('page-script')
-<!-- <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    var modalBarang = document.getElementById("modalBarang");
-    var modalBarangLabel = document.getElementById("modalBarangLabel");
-    var saveChangesButton = document.getElementById("saveChangesButton");
-
-    // Event listener for showing the modal
-    modalBarang.addEventListener("show.bs.modal", function (event) {
-      var button = event.relatedTarget;
-      var id = button.getAttribute("data-id");
-      var name = button.getAttribute("data-name");
-      var category = button.getAttribute("data-category");
-      var price = button.getAttribute("data-price");
-      var quantity = button.getAttribute("data-quantity");
-
-      var modalId = modalBarang.querySelector("#itemId");
-      var modalName = modalBarang.querySelector("#itemName");
-      var modalCategory = modalBarang.querySelector("#itemCategory");
-      var modalPrice = modalBarang.querySelector("#itemPrice");
-      var modalQuantity = modalBarang.querySelector("#itemQuantity");
-
-      if (id) {
-        modalBarangLabel.textContent = "Edit Item";
-        saveChangesButton.textContent = "Save changes";
-        modalId.value = id;
-        modalName.value = name;
-        modalCategory.value = category;
-        modalPrice.value = price;
-        modalQuantity.value = quantity;
-      } else {
-        modalBarangLabel.textContent = "Tambah Item Baru";
-        saveChangesButton.textContent = "Tambah Item";
-        modalId.value = "";
-        modalName.value = "";
-        modalCategory.value = "Personal Care";
-        modalPrice.value = "";
-        modalQuantity.value = "";
-      }
-    });
-
-    // Event listener for Add New Item button
-    var addNewItemButton = document.getElementById("addNewItemButton");
-    addNewItemButton.addEventListener("click", function () {
-      modalBarangLabel.textContent = "Tambah Item Baru";
-      saveChangesButton.textContent = "Tambah Item";
-      var modalId = modalBarang.querySelector("#itemId");
-      var modalName = modalBarang.querySelector("#itemName");
-      var modalCategory = modalBarang.querySelector("#itemCategory");
-      var modalPrice = modalBarang.querySelector("#itemPrice");
-      var modalQuantity = modalBarang.querySelector("#itemQuantity");
-
-      modalId.value = "";
-      modalName.value = "";
-      modalCategory.value = "Personal Care";
-      modalPrice.value = "";
-      modalQuantity.value = "";
-    });
-
-    // Event listener for Save Changes button
-    saveChangesButton.addEventListener("click", function () {
-      var id = document.getElementById("itemId").value;
-      var name = document.getElementById("itemName").value;
-      var category = document.getElementById("itemCategory").value;
-      var price = document.getElementById("itemPrice").value;
-      var quantity = document.getElementById("itemQuantity").value;
-
-      if (id) {
-        // Update existing item logic
-        console.log("Updating item with ID:", id);
-      } else {
-        // Add new item logic
-        console.log("Adding new item");
-        console.log("Name:", name);
-        console.log("Category:", category);
-        console.log("Price:", price);
-        console.log("Quantity:", quantity);
-      }
-
-      // Close modal
-      var modal = bootstrap.Modal.getInstance(modalBarang);
-      modal.hide();
-    });
-  });
-</script> -->
 <script>
   $(document).ready(function () {
-    console.log("test");
     $.ajaxSetup({
       headers: {
         "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content"),
@@ -293,7 +208,7 @@
 
     // Tambah Barang Clicked
     $(document).on("click", "#addNewItemButton", function () {
-      $("#formBarang").attr("action", "/tambah-barang");
+      $("#formBarang").attr("action", "/barang/tambah-barang");
       modalBarang.find("#modalBarangLabel").text("Tambah Barang");
       $("#formBarang").trigger("reset"); // Reset the form fields
       modalBarang.modal("show");
@@ -331,7 +246,7 @@
 
       // Update modal title and form action
       modalBarang.find("#modalBarangLabel").text("Edit Barang");
-      $("#formBarang").attr("action", "/edit-barang/" + idBarang);
+      $("#formBarang").attr("action", "/barang/edit-barang/" + idBarang);
 
       // Show the modal
       modalBarang.modal("show");
@@ -344,7 +259,7 @@
 
       if (confirm("Are you sure you want to delete this item?")) {
         $.ajax({
-          url: "/hapus-barang/" + idBarang,
+          url: "/barang/hapus-barang/" + idBarang,
           type: "DELETE",
           success: function (result) {
             alert("Item deleted successfully");
